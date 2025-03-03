@@ -1,0 +1,17 @@
+---
+title: "About"
+image: 2025-02-25 10.37.26.jpg
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/sabaimtiaz
+    - icon: github
+      text: Github
+      href: https://github.com/sabaimtiaz/
+
+---
+
+Hi! I'm Saba Imtiaz. I'm a freelance journalist, author, and knitter, documenting my forays into coding.
+

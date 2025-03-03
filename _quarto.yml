@@ -1,0 +1,18 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Knit, Purl, Code"
+  navbar:
+    right:
+      - about.qmd
+format:
+  html:
+    theme:
+      - litera
+      - brand
+    css: styles.css
+
+
+
