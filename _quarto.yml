@@ -14,5 +14,6 @@ format:
       - brand
     css: styles.css
 
-
+# Set the posts page as the home page
+home: posts/intro_knitting_stats/post_intro.qmd
 
