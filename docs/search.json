@@ -4,32 +4,32 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Hi! I’m Saba Imtiaz. I’m a freelance journalist, author, and knitter, documenting my forays into coding."
+    "text": "Hi! I’m Saba Imtiaz. I’m a freelance writer, author, and knitter, documenting my forays into coding. Get in touch: email / Instagram"
   },
   {
-    "objectID": "posts/intro_knitting_stats/index.html",
-    "href": "posts/intro_knitting_stats/index.html",
+    "objectID": "posts/intro_knitting_stats/post_intro.html",
+    "href": "posts/intro_knitting_stats/post_intro.html",
     "title": "A story of knitting stats, round one",
     "section": "",
     "text": "image of knitting needles and stockinette stitch in green yarn\nLast week, while I was doing the tubular cast off on my Lulu Slipover, I started to think about how long it takes to do the bind off, and in general, how long it takes to knit a project. I wish I was organized enough to track my knitting time on Toggl – I always think I will, but I don’t – but I do have a sense of how long I take from Ravelry’s start/end dates. (But there are so many variables! I knit multiple projects at a time, how complex each project is, etc.)\nAnyway, I was also watching a podcast about LLMs, and I’d spent the past few days prior doing some data analysis work with Claude. So I couldn’t help but wonder: couldn’t one figure out how long it takes, on average, to knit a project? This is the kind of conversation I am always having in my head or haranguing any knitter friend: oh god, I really want to cast this on but I don’t have time.\nThe mention of Cursor came up on the podcast – which my partner was just encouraging me to use – and of course, in my usual hacky sort of way, in which I just start doing things and figure out what I’m doing later, I started with Cursor. I did start watching a how-to video and got bored five seconds in. Anyway!"
   },
   {
-    "objectID": "posts/intro_knitting_stats/index.html#goal",
-    "href": "posts/intro_knitting_stats/index.html#goal",
+    "objectID": "posts/intro_knitting_stats/post_intro.html#goal",
+    "href": "posts/intro_knitting_stats/post_intro.html#goal",
     "title": "A story of knitting stats, round one",
     "section": "Goal:",
     "text": "Goal:\n\nThe goal is to turn this into a website!\nThe idea would be that a user could look up a pattern and the size they’re intending to make, and that would give them an estimate of how much time it would take – and what I found really useful, how many hours per day should they knit to finish within the average time. This would be useful for everyone from first-time knitters to experienced knitters planning their projects, and also potentially to knitwear designers to know how long it takes knitters to make the pattern."
   },
   {
-    "objectID": "posts/intro_knitting_stats/index.html#heres-a-summary-of-what-the-code-does-this-section-is-brought-to-you-by-claude",
-    "href": "posts/intro_knitting_stats/index.html#heres-a-summary-of-what-the-code-does-this-section-is-brought-to-you-by-claude",
+    "objectID": "posts/intro_knitting_stats/post_intro.html#heres-a-summary-of-what-the-code-does-this-section-is-brought-to-you-by-claude",
+    "href": "posts/intro_knitting_stats/post_intro.html#heres-a-summary-of-what-the-code-does-this-section-is-brought-to-you-by-claude",
     "title": "A story of knitting stats, round one",
     "section": "Here’s a summary of what the code does: (This section is brought to you by Claude!)",
     "text": "Here’s a summary of what the code does: (This section is brought to you by Claude!)\nA Python tool that analyzes knitting pattern completion times.\n\nPattern Analysis: The script connects to the Ravelry API to fetch pattern details and all projects made from that pattern.\n\ndef get_pattern_projects(pattern_url):\n    \"\"\"Fetch pattern projects using Ravelry API\"\"\"\n    try:\n        # First get the pattern name from URL\n        pattern_name = extract_pattern_name(pattern_url)\n        console.print(f\"[yellow]Pattern name extracted: {pattern_name}[/yellow]\")\n        \n        # Get the numeric pattern ID and pattern details\n        api_url = f\"https://api.ravelry.com/patterns/{pattern_name}.json\"\n\nTime Calculation: It calculates how long projects take by finding the difference between start and completion dates.\n\nstart_date = parser.parse(started)\nend_date = parser.parse(completed)\nduration = (end_date - start_date).days\n\nSize-Specific Analysis: It groups projects by size to provide more relevant statistics.\n\n# Add to appropriate size-specific statistics\nif is_test:\n    if normalized_size not in test_projects_by_size:\n        test_projects_by_size[normalized_size] = []\n    test_projects_by_size[normalized_size].append(duration)\nelse:\n    if normalized_size not in projects_by_size:\n        projects_by_size[normalized_size] = []\n    projects_by_size[normalized_size].append(duration)\n\nDetailed Statistics: The script calculates average, median, and percentile times.\n\ndef calculate_statistics(projects):\n    \"\"\"Calculate statistics from project durations\"\"\"\n    if not projects:\n        return None\n    \n    # Sort projects for percentile calculations\n    sorted_projects = sorted(projects)\n    \n    return {\n        'count': len(projects),\n        'average_days': round(mean(projects), 1),\n        'median_days': round(calculate_median(projects), 1),\n        'min_days': min(projects),\n        'max_days': max(projects),\n        '25th_percentile': round(sorted_projects[len(sorted_projects)//4], 1),\n        '75th_percentile': round(sorted_projects[len(sorted_projects)*3//4], 1)\n    }\n\nFriendly Output: It creates human-readable summaries of the time commitment required.\nMultiple Output Formats: Results are saved as HTML, plain text, and JSON.\n\ndef save_results(pattern_url, pattern_data, stats, stats_table, time_summary, results_dir, base_filename):\n    \"\"\"Save results in multiple formats\"\"\"\n    # Extract pattern name for display\n    pattern_name = extract_pattern_name(pattern_url)\n    pattern = pattern_data['pattern']\n    \n    # Generate pattern overview\n    pattern_overview = update_pattern_overview(pattern_data)\n    \n    # Create markdown content\n    md_content = f\"\"\"# {pattern['name']} - Knitting Time Analysis"
   },
   {
-    "objectID": "posts/intro_knitting_stats/index.html#exceptions",
-    "href": "posts/intro_knitting_stats/index.html#exceptions",
+    "objectID": "posts/intro_knitting_stats/post_intro.html#exceptions",
+    "href": "posts/intro_knitting_stats/post_intro.html#exceptions",
     "title": "A story of knitting stats, round one",
     "section": "Exceptions",
     "text": "Exceptions\n\nOf course, this doesn’t help with patterns that are new, and/or don’t have a lot of projects.\n\nThe code checks for sufficient data for analysis:\nvalid_sizes = {size: len(durations) for size, durations in projects_by_size.items() if len(durations) &gt;= 5}\n\nif not valid_sizes:\n    console.print(\"[red]No size data available with enough projects for analysis.[/red]\")\n    return\n\nThe data may also be affected by how users input their start/end dates for a project."

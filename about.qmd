@@ -10,8 +10,11 @@ about:
     - icon: github
       text: Github
       href: https://github.com/sabaimtiaz/
-
+  
 ---
 
-Hi! I'm Saba Imtiaz. I'm a freelance journalist, author, and knitter, documenting my forays into coding.
+Hi! I'm [Saba Imtiaz](sabaimtiaz.com). I'm a freelance writer, author, and knitter, documenting my forays into coding. 
+Get in touch: [email](mailto:saba@mm.st) / [Instagram](https://instagram.com/sabaimtiaz) 
+
+
 
