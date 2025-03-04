@@ -7,5 +7,14 @@ freeze: true
 # Enable banner style title blocks
 title-block-banner: true
 
-title: "Your Post"
+title: "A story of knitting stats, round one"
 date: 2025-03-03
+categories: 
+  - knitting
+  - Cursor
+  - programming
+  - Claude
+  - LLMs
+  - ravelry
+
+author: "Saba Imtiaz"

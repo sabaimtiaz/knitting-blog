@@ -2,5 +2,11 @@
   {
     "listing": "/posts/intro_knitting_stats/post_intro.html",
     "items": []
+  },
+  {
+    "listing": "/categories.html",
+    "items": [
+      "/posts/intro_knitting_stats/post_intro.html"
+    ]
   }
 ]

@@ -1,7 +1,7 @@
 ---
 title: "A story of knitting stats, round one"
 listing:
-  contents: "."
+  contents: posts
   sort: "date desc"
   type: default
   categories: true
@@ -42,7 +42,7 @@ The mention of [Cursor](https://www.cursor.com/) came up on the podcast -- which
 
 It was amazing to see the code output results. Data! Finally an answer to my dilemma of hmm, should I cast this on?! 
 
-Here are some extracts:
+Here are some extracts from the output: 
 
 [The Creabea's Tolsta Tee](https://www.ravelry.com/patterns/library/tolsta-tee), with the input of size 4 
 
@@ -51,13 +51,14 @@ Here are some extracts:
 [Petite Knit's Oslo sweater](https://www.ravelry.com/patterns/library/oslo-sweater-2), with the input of size 3
 ![screenshot showing an excerpt from the code's output](images/oslo.png)
 
-- It was really astounding to me how easy it was to work with just a focused approach. The past week of analyzing a large dataset of work taught me that I was working with too much info and asking the LLM to do too much.
-- This has all been really addictive. I've always enjoyed getting into coding, but my interest flags a lot and my default is really hacky/let's just see what works about how I do things (a result of years of figuring out HTML on Glogspot etc, or how I've ever understood anything.) I've been really interested in how this approach -- working in this focused, talk things through way -- with Cursor has helped.
+- It was really astounding how easy it was to work on Cursor and with a focused approach. 
+- This has been really addictive. I've always enjoyed getting into coding, but my interest flags a lot and my default is really hacky/let's just see what works. 
 
-# What happens next?
+# What next?
 - Adding visualizations
-- Figuring out how to add summaries of discussions [on forums etc] about the time it takes to make this project. Previous attempts haven't been successful, so this is something to figure out. 
-- Add links to YouTube videos about the pattern etc? 
+- Figuring out how to add summaries of discussions [on forums etc] about a pattern and the time involved. Previous attempts haven't been successful, so this is something I'd like to figure out. 
+- Add links to YouTube videos about the pattern etc.?
+- 
 
 ## Goal:
 - The goal is to turn this into a website!
@@ -157,5 +158,4 @@ if not valid_sizes:
     return
 ```
 - The data may also be affected by how users input their start/end dates for a project.
-
 

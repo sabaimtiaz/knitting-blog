@@ -33,5 +33,12 @@
     "title": "A story of knitting stats, round one",
     "section": "Exceptions",
     "text": "Exceptions\n\nOf course, this doesn’t help with patterns that are new, and/or don’t have a lot of projects.\n\nThe code checks for sufficient data for analysis:\nvalid_sizes = {size: len(durations) for size, durations in projects_by_size.items() if len(durations) &gt;= 5}\n\nif not valid_sizes:\n    console.print(\"[red]No size data available with enough projects for analysis.[/red]\")\n    return\n\nThe data may also be affected by how users input their start/end dates for a project."
+  },
+  {
+    "objectID": "categories.html",
+    "href": "categories.html",
+    "title": "Categories",
+    "section": "",
+    "text": "A story of knitting stats, round one\n\n\n\n\n\n\nknitting\n\n\nCursor\n\n\nprogramming\n\n\nClaude\n\n\nLLMs\n\n\nravelry\n\n\n\n\n\n\n\n\n\nMar 3, 2025\n\n\nSaba Imtiaz\n\n\n\n\n\n\nNo matching items"
   }
 ]
